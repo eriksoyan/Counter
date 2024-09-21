@@ -8,12 +8,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // Connected UI
+    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var plusButton: UIButton!
+    // Count
+    var count: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Label Text
+        counterLabel.text = "Значение счетчика: \(count)"
     }
-
-
+    // Plus one and change text
+    @IBAction func plusing(_ sender: Any) {
+        count += 1
+        counterLabel.text = "Значение счетчика: \(count)"
+    }
 }
 
